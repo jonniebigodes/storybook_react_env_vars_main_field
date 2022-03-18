@@ -14,7 +14,21 @@ module.exports = {
   core: {
     builder: "webpack4",
   },
-  env: () => ({
+  /* env: () => ({
+    EXAMPLEVAR: "MY_SUPER_DUPER_SECRET",
+    ANOTHERVAR: "ANOTHER_VAR",
+  }), */
+
+  // destructure the env vars from the file
+  /* env: ({ STORYBOOK_BOPO }) => {
+    return {
+      EXAMPLEVAR: "MY_SUPER_DUPER_SECRET",
+      ANOTHERVAR: "ANOTHER_VAR",
+      BOPO: STORYBOOK_BOPO,
+    };
+  }, */
+  env: (config) => ({
+    ...config,
     EXAMPLEVAR: "MY_SUPER_DUPER_SECRET",
     ANOTHERVAR: "ANOTHER_VAR",
   }),

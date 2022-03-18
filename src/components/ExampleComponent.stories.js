@@ -23,3 +23,11 @@ WithEnvVarFromFile.args = {
     ? process.env.STORYBOOK_BOPO
     : "NOT BOPO",
 };
+
+// no longer needed as the object is being merged
+/* console.log(process.env.BOPO);
+export const WithEnVarsLoadedFromBothSources = Template.bind({});
+WithEnVarsLoadedFromBothSources.args = {
+  secret: process.env.EXAMPLEVAR,
+  anotherSecret: process.env.BOPO,
+}; */
